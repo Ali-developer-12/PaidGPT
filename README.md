@@ -48,8 +48,4 @@ PaidGPT/
 │
 ├── client/          # Frontend React Application
 ├── server/          # Backend Express Server
-├── models/          # MongoDB Models
-├── routes/          # API Routes
-├── controllers/     # Backend Controllers
-├── middleware/      # Custom Middleware
 └── README.md
