@@ -1,7 +1,11 @@
-import React, { useState } from 'react'
+import React,  { useState, useEffect } from 'react'
 import {useAppContext} from '../context/AppContext'
+import { assets } from '../assets/assets'
 
-const {selectedChat, theme} = useAppContext();
+
+
+const Chatbox = () => {
+  const {selectedChat, theme} = useAppContext();
 
 const [messages, setMessages] = useState([]);
 const [loading, setLoading] = useState(false);
@@ -12,7 +16,8 @@ useEffect(()=>{
   }
 },[selectedChat])
 
-const Chatbox = () => {
+
+
   return (
     <div className='flex flex-1 flex-col justify-between m-5 md:m-10 xl:mx-30 max-md:mt-14 2xl:pr-40'>
 
@@ -27,6 +32,8 @@ const Chatbox = () => {
             <p className='mt-5 text-4xl sm:text-6xl text-center text-gray-400 dark:text-white'>Ask me anaything</p>
           </div>
         )}
+
+        {messages.map((message, index)=)}
 
       </div>
 

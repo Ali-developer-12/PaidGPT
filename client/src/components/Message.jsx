@@ -1,11 +1,19 @@
 import React from 'react'
 
-const Message = () => {
+const Message = ({message}) => {
   return (
     <div>
-      Message
+      {message.role === 'user' ? (
+        <div></div>
+      ) 
+      :
+    (
+    <div></div>
+  )
+    }
     </div>
   )
+ 
 }
 
 export default Message
