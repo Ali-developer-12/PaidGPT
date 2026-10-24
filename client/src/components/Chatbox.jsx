@@ -1,6 +1,7 @@
 import React,  { useState, useEffect } from 'react'
 import {useAppContext} from '../context/AppContext'
 import { assets } from '../assets/assets'
+import Message from '../components/Message'
 
 
 
@@ -33,7 +34,7 @@ useEffect(()=>{
           </div>
         )}
 
-        {messages.map((message, index)=)}
+        {messages.map((message, index)=> <Message key={index} message={message}/>)}
 
       </div>
 
