@@ -13,7 +13,7 @@ const [loading, setLoading] = useState(false);
 
 const [prompt, setPrompt] = useState('');
 const [mode, setMode] = useState('text');
-const [published, setIspublished] = useState(false);
+const [isPublished, setIsPublished] = useState(false);
 
 const onSubmit = (e)=>{
   e.preventDefault()
@@ -55,6 +55,14 @@ useEffect(()=>{
         }       
 
       </div>
+
+      {mode === 'image' && (
+        <label className='inline-flex gap-2 items-center mb-3 text-sm mx-auto'>
+          <p className='text-xs'>Published Generated image to community</p>
+          <input type="checkbox" className='cursor-pointer' checked={isPublished} onChange={(e)=>setIsPublished(e.target.checked  )}/>
+        </label>
+
+      )}
 
       {/* prompt input box */}
 
